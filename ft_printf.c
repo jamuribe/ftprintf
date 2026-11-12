@@ -6,7 +6,7 @@
 /*   By: josmolin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 19:58:48 by josmolin          #+#    #+#             */
-/*   Updated: 2026/11/05 19:58:52 by josmolin         ###   ########.fr       */
+/*   Updated: 2026/11/12 21:00:43 by josmolin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,17 @@ int	map_args(va_list args, char const *format, int width)
 			len += ft_pstr(va_arg(args, char *), width);
 			break;
 		case 'p':
-			printf("Pointer => %p \n", va_arg(args, char *));
+			//printf("Pointer => %p \n", va_arg(args, char *));
+			len += ft_ppointer(va_arg(args, char *));
 			break;
 		case 'd':
 		case 'i':
-			printf("Int => %d \n", va_arg(args, int));
+			//printf("Int => %d \n", va_arg(args, int));
+			ft_pnumber(va_arg(args, int), len);
 			break;
 		case 'u':
-			printf("Unsigned: %u\n", va_arg(args, unsigned int));
+			//printf("Unsigned: %u\n", va_arg(args, unsigned int));
+			ft_punsigned(va_arg(args, unsigned int), len);
 			break;
 		case 'x':
 			printf("hex lowe: %x\n", va_arg(args, unsigned int));
@@ -70,6 +73,7 @@ int	ft_printf(char const *format, ...)
 			map_args(args, format, width);
 			continue;
 		}
+		//else if()
 		write(1, &*format, 1);
 		format++;
 	}

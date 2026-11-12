@@ -6,7 +6,7 @@
 /*   By: josmolin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 19:59:31 by josmolin          #+#    #+#             */
-/*   Updated: 2026/11/05 21:09:41 by josmolin         ###   ########.fr       */
+/*   Updated: 2026/11/12 20:01:18 by josmolin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int main(void)
 {
 	int x = 42;
-
 	// Passing a format string containing all the types, 
 	// followed by the exact matching arguments in order!
 	ft_printf("Char here: %5c \n %s \n %p %d %i %u %x %X %%", 

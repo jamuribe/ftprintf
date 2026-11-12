@@ -5,9 +5,9 @@ int ft_ppointer(void *p)
 	int 		res;
 	unsigned int	placeholder;
 
-	placeholder = (unitptr_t)p;
+	placeholder = (uintptr_t)p;
 	res = 0;
-	if (*p > 0)
+	if (p > 0)
 		write(1, "0x", 2);
 	else
 		ft_putchar_fd('0', 1);

@@ -6,7 +6,7 @@
 /*   By: josmolin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 19:59:22 by josmolin          #+#    #+#             */
-/*   Updated: 2026/11/05 21:04:53 by josmolin         ###   ########.fr       */
+/*   Updated: 2026/11/12 20:59:36 by josmolin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,6 @@ int		ft_pwidth(int width);
 int		ft_pstr(char * s, int width);
 int		ft_ppointer(void *p);
 void	ft_puthex(unsigned int n);
+void	ft_pnumber(int n, int count); 
+void	ft_punsigned(unsigned int n, int count); 
 #endif
