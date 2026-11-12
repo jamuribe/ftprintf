@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include "libft/libft.h"
 #include <stdio.h> // Optional, if you want to compare with standard printf
 
 int main(void)
@@ -20,7 +19,7 @@ int main(void)
 
 	// Passing a format string containing all the types, 
 	// followed by the exact matching arguments in order!
-	ft_printf("Char here: %5c %10s %p %d %i %u %x %X %%", 
+	ft_printf("Char here: %5c \n %s \n %p %d %i %u %x %X %%", 
 		'K',              // c
 		"42 Barcelona",   // s
 		(void *)&x,       // p

@@ -7,7 +7,12 @@ RM          = rm -f
 
 SRC         = ft_printf.c \
 	      main.c \
-	      ft_putchar.c
+	      ft_putchar.c \
+	      ft_pwidth.c \
+	      ft_itoa.c \
+	      ft_pstr.c \
+	      ft_putnbr_fd.c \
+	      ft_putstr_fd.c \
 
 OBJS        = $(SRC:.c=.o)
 

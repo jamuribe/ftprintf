@@ -24,7 +24,8 @@ int	map_args(va_list args, char const *format, int width)
 			//printf("Char => %c \n", (char)va_arg(args, int));
 			break;
 		case 's':
-			printf("String here => %s \n", va_arg(args, char *));
+			//printf("String here => %s \n", va_arg(args, char *));
+			len += ft_pstr(va_arg(args, char *), width);
 			break;
 		case 'p':
 			printf("Pointer => %p \n", va_arg(args, char *));
@@ -54,10 +55,10 @@ int	ft_printf(char const *format, ...)
 	va_list args;
 	int		width;
 
-	width = 0;
 	va_start(args, format); // Initialize the list with the fixed parameter
 	while (*format)
 	{
+		width = 0;
 		if (*format == '%')
 		{
 			format++;
@@ -69,7 +70,7 @@ int	ft_printf(char const *format, ...)
 			map_args(args, format, width);
 			continue;
 		}
-		//write(1, &*format, 1);
+		write(1, &*format, 1);
 		format++;
 	}
 	return (0);

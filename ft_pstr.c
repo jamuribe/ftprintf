@@ -10,4 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
 
+int	ft_pstr(char *s, int width)
+{
+	int	res;
+
+	res = 0;
+	ft_pwidth(width);
+	ft_putstr_fd(s, 1);
+	return (res);
+}

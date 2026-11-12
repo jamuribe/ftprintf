@@ -15,19 +15,9 @@
 int	ft_putchar(char c, int width)
 {
 	int		res;
-	int		spaces;
-	char	mt;
-
-	mt = ' ';
-	res = 0;
-	spaces = width - 1;
-	while(spaces > 0)
-	{
-		write(1, &mt, 1);
-		res++;
-		spaces--;
-	}
-	write(1, &c, 1);
+	
+	res = ft_pwidth(width);
+	ft_putchar_fd(c, 1);
 	res++;
 	return (res);
 }
